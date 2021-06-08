@@ -17,13 +17,13 @@ describe('RGB-Lab routes', () => {
 
   });
 
-  it('this is a test that will return the name in the object', () => {
+  // it('copy', () => {
 
-    const character = { _id: '5cf5679a915ecad153ab68c9', name: 'Aang' };
-    const actual = getName(character); // returns Aang
-    expect(actual).toEqual('Aang');
+  //   const character = { _id: '5cf5679a915ecad153ab68c9', name: 'Aang' };
+  //   const actual = getName(character); // returns Aang
+  //   expect(actual).toEqual('Aang');
 
 
 
-  });
+  // });
 });
