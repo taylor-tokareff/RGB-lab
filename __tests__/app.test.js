@@ -2,6 +2,7 @@
 // const request = require('supertest');
 // const app = require('../lib/app');
 import getName from '../lib/functions.js';
+import { copyAndPush } from '../lib/functions.js';
 
 describe('RGB-Lab routes', () => {
   // beforeEach(() => {
@@ -17,15 +18,14 @@ describe('RGB-Lab routes', () => {
 
   });
 
-  // it('copy', () => {
+  test('returns a new array all the items in the original array and a new item pushed to thew end', () => {
+    const numbers = [1, 2, 3];
+    const actual = copyAndPush(numbers, 4);
+    expect(actual).toEqual([numbers, [1, 2, 3, 4]]);
+  });
 
-  //   const character = { _id: '5cf5679a915ecad153ab68c9', name: 'Aang' };
-  //   const actual = getName(character); // returns Aang
-  //   expect(actual).toEqual('Aang');
+  test('')
 
-
-
-  // });
 });
 
 
