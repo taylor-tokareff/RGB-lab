@@ -2,7 +2,7 @@
 // const request = require('supertest');
 // const app = require('../lib/app');
 import getName from '../lib/functions.js';
-import { copyAndPush } from '../lib/functions.js';
+import { copyAndPush, capitalizeAndFilter } from '../lib/functions.js';
 
 describe('RGB-Lab routes', () => {
   // beforeEach(() => {
@@ -24,7 +24,12 @@ describe('RGB-Lab routes', () => {
     expect(actual).toEqual([numbers, [1, 2, 3, 4]]);
   });
 
-  test('')
+  test('takes an array of strings capitalize all strings and filter out any string that starts with the letter F/f.', () => {
+    const stringArray = ['fox', 'dog', 'Falcon', 'cat', 'ferret'];
+    expect(capitalizeAndFilter(stringArray)).toEqual(['DOG', 'CAT']);
+
+
+  });
 
 });
 
