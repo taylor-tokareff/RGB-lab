@@ -1,13 +1,11 @@
 
 // const request = require('supertest');
 // const app = require('../lib/app');
-import getName from '../lib/functions.js';
+import getName, { fetchQuote } from '../lib/functions.js';
 import { copyAndPush, capitalizeAndFilter } from '../lib/functions.js';
 
 describe('RGB-Lab routes', () => {
-  // beforeEach(() => {
-  //   return setup(pool);
-  // });
+
 
   it('this is a test that will return the name in the object', () => {
 
@@ -31,6 +29,18 @@ describe('RGB-Lab routes', () => {
 
   });
 
-});
+  test('return a random quote with specific format', async () => {
+    const munged = {
+      name: expect.any(String),
+      text: expect.any(String),
+      image: expect.any(String)
+    };
 
+    const actual = await fetchQuote();
+
+    expect(actual).toEqual(munged);
+
+  });
+
+});
 
